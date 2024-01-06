@@ -3,8 +3,8 @@
   "package": "@cinnabar-forge/cf-sqlite3",
   "name": "Cinnabar Forge SQLite3 Wrapper",
   "major": 0,
-  "minor": 0,
+  "minor": 1,
   "patch": 0,
-  "revision": 0,
-  "timestamp": 0
+  "revision": 1,
+  "timestamp": 1704580527
 }
