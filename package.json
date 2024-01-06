@@ -1,0 +1,20 @@
+{
+  "name": "@cinnabar-forge/cf-sqlite3",
+  "version": "0.0.0",
+  "author": {
+    "name": "Timur Moziev",
+    "email": "timur@moziev.ru",
+    "url": "https://moziev.ru"
+  },
+  "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "version.json"
+  ],
+  "dependencies": {
+    "sqlite3": "^5.1.6"
+  },
+  "type": "module"
+}

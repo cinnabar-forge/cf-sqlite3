@@ -1,0 +1,10 @@
+{
+  "cfVersion": 1,
+  "package": "@cinnabar-forge/cf-sqlite3",
+  "name": "Cinnabar Forge SQLite3 Wrapper",
+  "major": 0,
+  "minor": 0,
+  "patch": 0,
+  "revision": 0,
+  "timestamp": 0
+}
