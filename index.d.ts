@@ -1,5 +1,5 @@
 declare module "@cinnabar-forge/cf-sqlite3" {
-  export default function (databaseFile: string): {
+  export type Sqlite3Database = {
     exec: (query: string) => Promise<void>;
     run: (query: string, args?: Array<any>) => Promise<number>;
     get: <T, R>(
@@ -15,4 +15,6 @@ declare module "@cinnabar-forge/cf-sqlite3" {
     beginTransaction: () => Promise<void>;
     commitTransaction: () => Promise<void>;
   };
+
+  export default function (databaseFile: string): Sqlite3Database;
 }
