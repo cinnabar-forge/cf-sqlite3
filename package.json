@@ -14,7 +14,7 @@
     "version.json"
   ],
   "dependencies": {
-    "sqlite3": "^5.1.6"
+    "sqlite3": "^5.1.7"
   },
   "type": "module"
 }
