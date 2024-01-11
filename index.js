@@ -53,7 +53,7 @@ export default function (databaseFile) {
             return;
           }
           if (callback != null) {
-            resolve(callback());
+            resolve(callback(row));
           } else {
             resolve(row);
           }
@@ -70,11 +70,11 @@ export default function (databaseFile) {
             return;
           }
           if (rows == null || rows.length == 0) {
-            resolve(null);
+            resolve([]);
             return;
           }
           if (callback != null) {
-            resolve(callback());
+            resolve(callback(rows));
           } else {
             resolve(rows);
           }
