@@ -1,7 +1,7 @@
 {
   "name": "@cinnabar-forge/cf-sqlite3",
   "description": "Cinnabar Forge SQLite3 Wrapper",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Timur Moziev",
     "email": "timur@moziev.ru",
