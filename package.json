@@ -3,6 +3,7 @@
   "version": "0.2.1",
   "description": "Cinnabar Forge SQLite3 Wrapper",
   "repository": "github:cinnabar-forge/cf-sqlite3",
+  "license": "ISC",
   "author": {
     "name": "Timur Moziev",
     "email": "timur.moziev@gmail.com",
