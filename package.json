@@ -1,13 +1,14 @@
 {
   "name": "@cinnabar-forge/cf-sqlite3",
-  "description": "Cinnabar Forge SQLite3 Wrapper",
   "version": "0.2.1",
+  "description": "Cinnabar Forge SQLite3 Wrapper",
+  "repository": "github:cinnabar-forge/cf-sqlite3",
   "author": {
     "name": "Timur Moziev",
-    "email": "timur@moziev.ru",
-    "url": "https://moziev.ru"
+    "email": "timur.moziev@gmail.com",
+    "url": "https://timurrin.github.io"
   },
-  "repository": "github:cinnabar-forge/cf-sqlite3",
+  "type": "module",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
@@ -15,8 +16,13 @@
     "index.d.ts",
     "version.json"
   ],
-  "dependencies": {
-    "sqlite3": "^5.1.7"
+  "scripts": {
+    "lint": "npx eslint --fix --ext .js,.json ."
   },
-  "type": "module"
+  "dependencies": {
+    "sqlite3": "~5.1.7"
+  },
+  "devDependencies": {
+    "@cinnabar-forge/eslint-plugin": "~0.3.0"
+  }
 }
