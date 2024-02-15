@@ -13,53 +13,6 @@ export default function (databaseFile) {
   });
 
   return {
-    exec: async function (query) {
-      await new Promise((resolve, reject) => {
-        console.log(NAME, "exec", query);
-        db.exec(query, (err) => {
-          if (err != null) {
-            console.error(err.message);
-            reject(err);
-            return;
-          }
-          resolve();
-        });
-      });
-    },
-    run: async function (query, args) {
-      return await new Promise((resolve, reject) => {
-        console.log(NAME, "run", query, args);
-        db.run(query, args ?? EMPTY_ARRAY, function (err) {
-          if (err != null) {
-            console.error(err.message);
-            reject(err);
-            return;
-          }
-          resolve(this.lastID);
-        });
-      });
-    },
-    get: async function (query, args, callback) {
-      return await new Promise((resolve, reject) => {
-        console.log(NAME, "get", query, args);
-        db.get(query, args ?? EMPTY_ARRAY, function (err, row) {
-          if (err != null) {
-            console.error(err.message);
-            reject(err);
-            return;
-          }
-          if (row == null) {
-            resolve(null);
-            return;
-          }
-          if (callback != null) {
-            resolve(callback(row));
-          } else {
-            resolve(row);
-          }
-        });
-      });
-    },
     all: async function (query, args, callback) {
       return await new Promise((resolve, reject) => {
         console.log(NAME, "all", query, args);
@@ -112,6 +65,53 @@ export default function (databaseFile) {
           });
         });
       }
+    },
+    exec: async function (query) {
+      await new Promise((resolve, reject) => {
+        console.log(NAME, "exec", query);
+        db.exec(query, (err) => {
+          if (err != null) {
+            console.error(err.message);
+            reject(err);
+            return;
+          }
+          resolve();
+        });
+      });
+    },
+    get: async function (query, args, callback) {
+      return await new Promise((resolve, reject) => {
+        console.log(NAME, "get", query, args);
+        db.get(query, args ?? EMPTY_ARRAY, function (err, row) {
+          if (err != null) {
+            console.error(err.message);
+            reject(err);
+            return;
+          }
+          if (row == null) {
+            resolve(null);
+            return;
+          }
+          if (callback != null) {
+            resolve(callback(row));
+          } else {
+            resolve(row);
+          }
+        });
+      });
+    },
+    run: async function (query, args) {
+      return await new Promise((resolve, reject) => {
+        console.log(NAME, "run", query, args);
+        db.run(query, args ?? EMPTY_ARRAY, function (err) {
+          if (err != null) {
+            console.error(err.message);
+            reject(err);
+            return;
+          }
+          resolve(this.lastID);
+        });
+      });
     },
   };
 }
