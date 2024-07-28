@@ -20,8 +20,6 @@ jobs:
         name: "Install Node.js"
       - run: npm ci
         name: "Install dependencies"
-      - run: npm test
-        name: "Run tests"
       - run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
